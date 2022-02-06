@@ -14,11 +14,9 @@ use App\Http\Controllers\indexCon;
 |
 */
 
-Route::get('/', [indexCon::class, 'pa']);
+Route::get('/', [indexCon::class, 'product']);
 
-Route::get('/home', [indexCon::class, 'pa']);
+Route::get('/home', [indexCon::class, 'product']);
 
-Route::get('/products/1', function () {
-    return view('products/1');
-});
+Route::get('/product_details/{n}', [indexCon::class, 'details']);
 

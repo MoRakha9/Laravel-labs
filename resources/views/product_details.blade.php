@@ -37,16 +37,20 @@
     </div>
     <div class="row">
       <!--ADD CLASSES HERE d-flex align-items-stretch-->
-      <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+      @foreach($products as $product)
+      @if($product['id'] == $url[strlen($url)-1])
+          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
         <div class="card">
-          <img src='../img/products/kit1.jpeg' class="card-img-top" alt="Card Image">
+          <img src="../{{$product['link']}}" class="card-img-top" alt="Card Image">
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">kit1</h5>
-            <p class="card-text mb-4">1000$</p>
+            <h5 class="card-title">{{$product['name']}}</h5>
+            <p class="card-text mb-4">{{$product['price']}}</p>
             <a href="/home" class="btn btn-primary text-white mt-auto align-self-start">Back</a>
           </div>
         </div>
       </div>
+      @endif
+      @endforeach
       </div>
     </div>
   </div>

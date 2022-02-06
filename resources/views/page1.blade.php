@@ -62,7 +62,7 @@
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">{{$product['name']}}</h5>
             <p class="card-text mb-4">{{$product['price']}}</p>
-            <a href="./products/{{$product['id']}}" class="btn btn-primary text-white mt-auto align-self-start">Show Details</a>
+            <a href="./product_details/{{$product['id']}}" class="btn btn-primary text-white mt-auto align-self-start">Show Details</a>
           </div>
         </div>
       </div>
